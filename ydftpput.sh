@@ -66,7 +66,6 @@ ftp_log=`ftp -i -v -n <<EOF
 open $UpFtpIP
 user $UpUserName $UpPassWord
 binary
-passive
 lcd $FileLocalCombinBackup/
 put data_$GZFileTime.tar.gz
 close
@@ -99,7 +98,6 @@ ftp_log=`ftp -i -v -n <<EOF
 open $UpFtpIP
 user $UpUserName $UpPassWord
 binary
-passive
 lcd $FileLocalCombinBackup/
 mput data_*.tar.gz
 close
